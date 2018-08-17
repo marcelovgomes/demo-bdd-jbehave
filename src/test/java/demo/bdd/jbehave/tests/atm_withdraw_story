@@ -1,0 +1,11 @@
+Story: Customer needs to do a withdraw
+
+Scenario: Customer with insufficient funds
+Given a customer with negative funds of EUR -200.00
+When request a withdraw of EUR 100.00
+Then withdraw is not allowed and return the message Insufficient funds!
+
+Scenario: Customer with sufficient funds
+Given a customer with positive funds of EUR 1500.00
+When needs to do a withdraw of EUR 200.00
+Then withdraw is allowed

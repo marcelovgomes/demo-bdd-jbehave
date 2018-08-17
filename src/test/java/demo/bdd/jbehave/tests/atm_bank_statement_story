@@ -1,0 +1,11 @@
+Story: Customer needs of a bank statement
+
+Scenario: Bank statement is not available for the month selected
+Given a customer without financial transactions realized
+When needs of a bank statement
+Then bank statement is not available and the message Bank statement is not available for the month selected
+
+Scenario: Bank statement available for the month selected
+Given a customer with financial transactions realized
+When needs of a bank statement with details
+Then bank statement is available
